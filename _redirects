@@ -1,0 +1,12 @@
+# Redirects for hr-workshop.rt-ai.co.il
+
+# Redirect old URLs if any
+/workshop    /    302
+/registration    /#register    302
+/signup    /#register    302
+
+# Handle 404 errors - redirect to home  
+/*    /index.html    200
+
+# Force HTTPS (handled by Cloudflare)
+# http://hr-workshop.rt-ai.co.il/*    https://hr-workshop.rt-ai.co.il/:splat    301!

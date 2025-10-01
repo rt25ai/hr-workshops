@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hr-workshop.rt-ai.co.il/sitemap.xml
+
+# Main pages
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+
+# Block admin areas if any
+Disallow: /admin/
+Disallow: /.git/
+
+# Main website info
+# Website: hr-workshop.rt-ai.co.il
+# Description: AI PRO - סדנת בינה מלאכותית למנהלי HR
+# Contact: roi@rt-ai.co.il

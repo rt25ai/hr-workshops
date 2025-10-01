@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PRO - סדנת בינה מלאכותית למנהלי HR | רועי טל</title>
+    <meta name="description" content="סדנת בינה מלאכותית מתקדמת למנהלי משאבי אנוש. למד איך להטמיע AI בעבודת HR יומיומית ולהגביר פרודוקטיביות בצורה דרמטית.">
+    <meta name="keywords" content="בינה מלאכותית, HR, משאבי אנוש, סדנה, AI, ChatGPT, אוטומציה">
+    <meta name="author" content="רועי טל">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://hr-workshop.rt-ai.co.il">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI PRO - סדנת בינה מלאכותית למנהלי HR | רועי טל">
+    <meta property="og:description" content="למד איך להטמיע בינה מלאכותית בעבודת HR ולהגביר פרודוקטיביות. סדנה מקצועית עם רועי טל">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hr-workshop.rt-ai.co.il">
+    <meta property="og:image" content="https://i.imgur.com/lOLiTah.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="רועי טל - מומחה AI למנהלי HR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI PRO - סדנת בינה מלאכותית למנהלי HR">
+    <meta name="twitter:description" content="למד איך להטמיע בינה מלאכותית בעבודת HR ולהגביר פרודוקטיביות">
+    <meta name="twitter:image" content="https://i.imgur.com/lOLiTah.png">
+    <meta name="twitter:image:alt" content="רועי טל - מומחה AI למנהלי HR">
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/lOLiTah.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/lOLiTah.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/lOLiTah.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Hebrew Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Alef:wght@400;700&family=Noto+Sans+Hebrew:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #13B8C4;
+            --secondary-color: #456160;
+            --accent-color: #13B8C4;
+            --text-primary: #2d3748;
+            --text-secondary: #A6B3AF;
+            --bg-primary: #F6F8F6;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+        }
+        
+        body {
+            font-family: 'Assistant', 'Alef', 'Noto Sans Hebrew', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-primary);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            position: relative;
+        }
+        
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(19, 184, 196, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(69, 97, 96, 0.1) 0%, transparent 50%),
+                linear-gradient(135deg, transparent 0%, rgba(19, 184, 196, 0.05) 50%, transparent 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Liquid Glass Effect */
+        .liquid-glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+        
+        .liquid-glass-subtle {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        
+        .hero-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            box-shadow: 
+                0 12px 40px rgba(0, 0, 0, 0.12),
+                inset 0 2px 0 rgba(255, 255, 255, 0.5);
+        }
+        
+        .shadow-custom {
+            box-shadow: 0 8px 32px rgba(19, 184, 196, 0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0ea5e9 100%);
+            border: none;
+            transition: all 0.3s ease;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(19, 184, 196, 0.3);
+            background: linear-gradient(135deg, #0ea5e9 0%, var(--primary-color) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 20px 40px rgba(19, 184, 196, 0.2),
+                0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .professional-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), #0ea5e9);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 16px rgba(19, 184, 196, 0.3);
+        }
+        
+        /* RTL specific styles */
+        .rtl-text {
+            text-align: right;
+            direction: rtl;
+        }
+        
+        /* Accessibility styles */
+        .accessibility-menu {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* Hero Title - Clean and Professional */
+        .hero-title-elegant {
+            font-family: 'Assistant', 'Alef', sans-serif;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+            line-height: 1;
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+        
+        .hero-title-elegant::before {
+            content: 'AI HR PRO';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            z-index: -1;
+            filter: blur(2px);
+            opacity: 0.4;
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+
+        
+        /* Responsive text sizes */
+        @media (max-width: 768px) {
+            .hero-title-elegant {
+                font-size: 3.5rem !important;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title-elegant {
+                font-size: 2.75rem !important;
+            }
+        }
+        
+        /* Form styling */
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        /* FAQ styling */
+        .faq-toggle {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-toggle:hover {
+            background-color: #f8fafc;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#13B8C4',
+                        secondary: '#456160',
+                        accent: '#13B8C4',
+                        'glass-bg': 'rgba(255, 255, 255, 0.7)',
+                        'bg-primary': '#F6F8F6',
+                        'text-helper': '#A6B3AF',
+                    },
+                    fontFamily: {
+                        'hebrew': ['Assistant', 'Alef', 'Noto Sans Hebrew', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        '18': '18px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 rtl-text">
+    
+    <!-- Accessibility Menu -->
+    <div id="accessibility-menu" class="fixed top-16 left-4 z-50 bg-white rounded-lg shadow-lg p-4 hidden accessibility-menu border">
+        <h3 class="font-bold mb-3 text-sm">נגישות</h3>
+        <div class="space-y-2">
+            <button onclick="adjustFontSize('increase')" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm">
+                <i class="fas fa-plus ml-2"></i>הגדל טקסט
+            </button>
+            <button onclick="adjustFontSize('decrease')" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm">
+                <i class="fas fa-minus ml-2"></i>הקטן טקסט
+            </button>
+            <button onclick="toggleHighContrast()" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm">
+                <i class="fas fa-adjust ml-2"></i>ניגודיות גבוהה
+            </button>
+            <button onclick="highlightLinks()" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm">
+                <i class="fas fa-link ml-2"></i>הדגש קישורים
+            </button>
+            <button onclick="stopAnimations()" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm">
+                <i class="fas fa-stop ml-2"></i>עצור אנימציות
+            </button>
+            <button onclick="resetAccessibility()" class="block w-full text-right px-2 py-1 hover:bg-gray-100 rounded text-sm text-red-600">
+                <i class="fas fa-undo ml-2"></i>אפס הגדרות
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-40 liquid-glass-subtle transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <!-- Accessibility Button -->
+                    <button id="accessibility-btn" class="p-2 rounded-full hover:bg-white/50 transition-colors" aria-label="תפריט נגישות">
+                        <i class="fas fa-universal-access" style="color: var(--primary-color);"></i>
+                    </button>
+                    
+                    <a href="#register" class="btn-primary px-8 py-3 rounded-full font-bold text-sm hover:shadow-lg transition-all duration-300">
+                        הרשמה עכשיו
+                    </a>
+                </div>
+                
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="text-right">
+                        <h1 class="font-bold text-2xl text-gradient">AI PRO</h1>
+                        <p class="text-sm font-medium" style="color: var(--secondary-color);">רועי טל - AI פשוט בעולם חכם</p>
+                    </div>
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="https://i.imgur.com/lOLiTah.png" alt="לוגו רועי טל AI PRO" 
+                             class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Content Column -->
+                    <div class="text-center lg:text-right">
+                        <h2 class="mb-8 leading-tight text-center lg:text-right">
+                            <!-- AI HR PRO Title - Clean and Professional -->
+                            <div class="hero-title-elegant text-6xl lg:text-7xl font-black mb-6 relative">
+                                AI HR PRO
+                            </div>
+                            
+                            <!-- Subtitle -->
+                            <div class="text-2xl lg:text-3xl font-light opacity-95">
+                                הסדנה שתשנה את הדרך שבה אתם עובדים!
+                            </div>
+                        </h2>
+                        
+                        <p class="text-xl mb-8 opacity-90 leading-relaxed">
+                            כלים פשוטים למנהלי משאבי אנוש – חיסכון זמן, קליטה חכמה, 
+                            גיוס חכם וזיהוי עובדים בסיכון
+                        </p>
+                        
+                        <div class="flex justify-center lg:justify-end mb-8">
+                            <a href="#register" class="btn-primary px-10 py-4 rounded-full text-lg font-bold inline-flex items-center gap-3 shadow-2xl">
+                                רוצה להירשם עכשיו
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="flex justify-center lg:justify-end items-center gap-8 text-sm opacity-80">
+                            <div class="flex items-center gap-2">
+                                <div class="professional-icon w-8 h-8 text-sm">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                3 שעות מעשיות
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="professional-icon w-8 h-8 text-sm">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                קבוצה קטנה
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="professional-icon w-8 h-8 text-sm">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                תעודת השלמה
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Column -->
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="hero-glass p-8 w-full max-w-md">
+                            <h3 class="text-2xl font-bold mb-6 text-center" style="color: var(--primary-color);">
+                                הירשמו עכשיו לסדנה
+                            </h3>
+                            
+                            <form id="hero-form" class="space-y-4" aria-label="טופס הרשמה מהיר לסדנה">
+                                <input type="email" name="email" placeholder="המייל שלך" 
+                                       aria-label="כתובת דואר אלקטרוני לשמירת מקום"
+                                       class="w-full px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-primary text-gray-900 liquid-glass-subtle" required>
+                                
+                                <input type="text" name="name" placeholder="השם שלך" 
+                                       aria-label="שם מלא"
+                                       class="w-full px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-primary text-gray-900 liquid-glass-subtle" required>
+                                       
+                                <input type="tel" name="phone" placeholder="טלפון" 
+                                       aria-label="מספר טלפון"
+                                       class="w-full px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-primary text-gray-900 liquid-glass-subtle" required>
+                                
+                                <button type="submit" class="w-full btn-primary py-4 rounded-xl text-lg font-bold hover:shadow-2xl transition-all duration-300">
+                                    שמור את מקומי בסדנה 🚀
+                                </button>
+                                
+                                <p class="text-center text-sm" style="color: var(--text-secondary);">
+                                    <i class="fas fa-shield-alt ml-1"></i>
+                                    פרטיך לא יועברו. השימוש – ליצירת קשר בלבד
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Geometric Background Elements -->
+        <div class="absolute top-20 left-20 w-64 h-64 opacity-10">
+            <div class="w-full h-full border-2 border-white rounded-full animate-pulse"></div>
+        </div>
+        <div class="absolute bottom-20 right-20 w-48 h-48 opacity-10">
+            <div class="w-full h-full bg-white/10 transform rotate-45 rounded-lg"></div>
+        </div>
+        <div class="absolute top-1/2 left-10 w-32 h-32 opacity-10">
+            <div class="w-full h-full bg-white/10 rounded-lg animate-bounce"></div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20" style="background-color: var(--bg-primary);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6 text-gradient">למה כדאי לך להשתתף?</h3>
+                <p class="text-xl max-w-3xl mx-auto leading-relaxed" style="color: var(--text-primary);">
+                    הסדנה שתחסוך לך שעות עבודה בכל יום ותהפוך אותך למנהל HR החכם ביותר בארגון
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="card-hover liquid-glass p-8 text-center">
+                    <div class="professional-icon mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">חסוך 80% מהזמן</h4>
+                    <p class="text-lg leading-relaxed" style="color: var(--text-primary);">
+                        משימות שלוקחות לך שעות - תסתיימנה בדקות. 
+                        כתיבה אוטומטית, סינון מהיר וניתוח נתונים חכם
+                    </p>
+                </div>
+                
+                <div class="card-hover liquid-glass p-8 text-center">
+                    <div class="professional-icon mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">שיפור איכות החלטות</h4>
+                    <p class="text-lg leading-relaxed" style="color: var(--text-primary);">
+                        קבל תובנות מדויקות על מועמדים, נתח מגמות בצוות 
+                        וקבל החלטות מבוססות נתונים
+                    </p>
+                </div>
+                
+                <div class="card-hover liquid-glass p-8 text-center">
+                    <div class="professional-icon mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">ROI מיידי</h4>
+                    <p class="text-lg leading-relaxed" style="color: var(--text-primary);">
+                        החזר השקעה תוך שבועיים. הזמן שתחסוך 
+                        יהיה שווה פי כמה מעלות הסדנה
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6 text-gradient">מה נלמד בסדנה?</h3>
+                <p class="text-xl max-w-2xl mx-auto" style="color: var(--text-primary);">6 נושאים מעשיים שתוכל ליישם מיד</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">כתיבת תיאורי תפקידים</h4>
+                            <p style="color: var(--text-primary);">
+                                יצירת תיאורי תפקידים מושכים ומדויקים בדקות ספורות
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">סינון קורות חיים חכם</h4>
+                            <p style="color: var(--text-primary);">
+                                ניתוח מאות קורות חיים ומציאת המועמדים הטובים ביותר
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">ריאיונות עבודה חכמים</h4>
+                            <p style="color: var(--text-primary);">
+                                יצירת שאלות מותאמות וניתוח תשובות בזמן אמת
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">דוחות וניתוחים</h4>
+                            <p style="color: var(--text-primary);">
+                                הפקת דוחות מפורטים וקבלת תובנות על הצוות
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">תקשורת אוטומטית</h4>
+                            <p style="color: var(--text-primary);">
+                                כתיבת מיילים מקצועיים והודעות מותאמות אישית
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">כלי AI מתקדמים</h4>
+                            <p style="color: var(--text-primary);">
+                                הכרת הכלים החדישים ביותר ואיך להשתמש בהם
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Example Section -->
+    <section class="py-20" style="background-color: var(--bg-primary);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6 text-gradient">דוגמה אמיתית</h3>
+                <p class="text-xl" style="color: var(--text-primary);">ראו איך AI יכול לשנות את עבודתך</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Before -->
+                    <div class="liquid-glass p-8">
+                        <h4 class="font-bold text-2xl mb-6 flex items-center" style="color: #dc2626;">
+                            <div class="professional-icon w-10 h-10 mr-3" style="background: linear-gradient(135deg, #dc2626, #ef4444);">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            לפני - הדרך הישנה
+                        </h4>
+                        <div class="space-y-4">
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                                כתיבת תיאור תפקיד: <span class="font-bold">2-3 שעות</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                                סינון 100 קורות חיים: <span class="font-bold">יום שלם</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                                הכנת שאלות לריאיון: <span class="font-bold">שעה</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                                כתיבת מייל דחייה: <span class="font-bold">15 דקות</span>
+                            </p>
+                        </div>
+                        <div class="mt-6 p-4 liquid-glass-subtle text-center">
+                            <p class="font-bold text-2xl" style="color: #dc2626;">סה"כ: 8+ שעות</p>
+                        </div>
+                    </div>
+                    
+                    <!-- After -->
+                    <div class="liquid-glass p-8">
+                        <h4 class="font-bold text-2xl mb-6 flex items-center" style="color: #059669;">
+                            <div class="professional-icon w-10 h-10 mr-3" style="background: linear-gradient(135deg, #059669, #10b981);">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            אחרי - עם AI
+                        </h4>
+                        <div class="space-y-4">
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                כתיבת תיאור תפקיד: <span class="font-bold">10 דקות</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                סינון 100 קורות חיים: <span class="font-bold">30 דקות</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                הכנת שאלות לריאיון: <span class="font-bold">5 דקות</span>
+                            </p>
+                            <p class="flex items-start gap-3 text-lg">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                כתיבת מייל דחייה: <span class="font-bold">2 דקות</span>
+                            </p>
+                        </div>
+                        <div class="mt-6 p-4 liquid-glass-subtle text-center">
+                            <p class="font-bold text-2xl" style="color: #059669;">סה"כ: 47 דקות</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <div class="inline-block btn-primary px-8 py-4 rounded-full font-bold text-2xl shadow-2xl">
+                        חיסכון של 90% מהזמן! 🚀
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Dictionary Section -->
+    <section class="py-20" style="background-color: var(--bg-primary);">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6 text-gradient">מושגי AI בעולם HR</h3>
+                <p class="text-xl max-w-3xl mx-auto" style="color: var(--text-primary);">
+                    הכירו את המושגים המרכזיים שיעזרו לכם להבין ולהטמיע בינה מלאכותית בעבודה היומיומית
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">Large Language Model (LLM)</h4>
+                            <p style="color: var(--text-primary);">
+                                מודל בינה מלאכותית מתקדם המבין ויוצר טקסט באיכות אנושית, כמו ChatGPT או Gemini
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">Prompt Engineering</h4>
+                            <p style="color: var(--text-primary);">
+                                האמנות של ניסוח הוראות מדויקות ל-AI כדי לקבל תוצאות אופטימליות ורלוונטיות
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">Workflow Automation</h4>
+                            <p style="color: var(--text-primary);">
+                                אוטומציה של תהליכי עבודה חוזרים באמצעות AI לחיסכון זמן ושיפור יעילות
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">AI-Powered Screening</h4>
+                            <p style="color: var(--text-primary);">
+                                סינון מועמדים חכם באמצעות בינה מלאכותית לזיהוי התאמה מיטבית לתפקידים
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">Predictive Analytics</h4>
+                            <p style="color: var(--text-primary);">
+                                ניתוח נתונים להתחזית התנהגות עובדים, סיכון עזיבה ותחזיות גיוס
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="liquid-glass p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="professional-icon flex-shrink-0">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-3" style="color: var(--primary-color);">Natural Language Processing</h4>
+                            <p style="color: var(--text-primary);">
+                                טכנולוגיה המאפשרת למחשב להבין ולעבד שפה טבעית לניתוח קורות חיים ותכתובות
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Structure Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6 text-gradient">מבנה הסדנה</h3>
+                <p class="text-xl" style="color: var(--text-primary);">3 שעות מעשיות עם כלים שתוכלו להשתמש בהם מיד</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="liquid-glass p-8 text-center">
+                        <div class="professional-icon mb-6 mx-auto">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">היכרות עם AI</h4>
+                        <p style="color: var(--text-primary);">
+                            מה זה AI, איך זה עובד ולמה זה חשוב לעולם ה-HR המודרני
+                        </p>
+                    </div>
+                    
+                    <div class="liquid-glass p-8 text-center">
+                        <div class="professional-icon mb-6 mx-auto">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">כלים מעשיים</h4>
+                        <p style="color: var(--text-primary);">
+                            התנסות ישירה בכלי AI לכתיבה, סינון, ניתוח ותקשורת
+                        </p>
+                    </div>
+                    
+                    <div class="liquid-glass p-8 text-center">
+                        <div class="professional-icon mb-6 mx-auto">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">תרגול ויישום</h4>
+                        <p style="color: var(--text-primary);">
+                            עבודה על מקרי בוחן אמיתיים והטמעה בעבודה היומיומית
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 hero-glass p-8 text-center">
+                    <h4 class="text-2xl font-bold mb-4" style="color: var(--primary-color);">בונוס מיוחד 🎁</h4>
+                    <p class="text-lg" style="color: var(--text-primary);">
+                        תקבלו גישה לבנק תבניות Prompts מוכנות לשימוש ומדריך יישום מקיף
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl font-bold mb-6 text-gradient">הירשמו עכשיו לסדנה</h3>
+                    <p class="text-2xl font-medium" style="color: var(--primary-color);">מקומות מוגבלים ל-15 משתתפים בלבד</p>
+                </div>
+                
+                <div class="hero-glass p-10 mx-auto max-w-2xl">
+                    <form id="registration-form" class="space-y-6" aria-label="טופס הרשמה לסדנת AI PRO">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" name="fullName" placeholder="שם מלא *" 
+                                   aria-label="שם מלא - שדה חובה"
+                                   class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle" style="focus:ring-color: var(--primary-color);" required>
+                            <input type="text" name="position" placeholder="תפקיד *" 
+                                   aria-label="תפקיד נוכחי - שדה חובה"
+                                   class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle" style="focus:ring-color: var(--primary-color);" required>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="email" name="email" placeholder="דואר אלקטרוני *" 
+                                   aria-label="כתובת דואר אלקטרוני - שדה חובה"
+                                   class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle" style="focus:ring-color: var(--primary-color);" required>
+                            <input type="tel" name="phone" placeholder="טלפון *" 
+                                   aria-label="מספר טלפון - שדה חובה"
+                                   class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle" style="focus:ring-color: var(--primary-color);" required>
+                        </div>
+                        
+                        <input type="text" name="organization" placeholder="ארגון (אופציונלי)" 
+                               aria-label="שם הארגון - שדה אופציונלי"
+                               class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle" style="focus:ring-color: var(--primary-color);">
+                        
+                        <textarea name="questions" placeholder="שאלות או הערות (אופציונלי)" rows="4"
+                                  aria-label="שאלות או הערות נוספות - שדה אופציונלי"
+                                  class="form-input w-full px-6 py-4 rounded-xl border-0 focus:ring-2 text-gray-900 liquid-glass-subtle resize-none" style="focus:ring-color: var(--primary-color);"></textarea>
+                        
+                        <!-- Privacy Notice -->
+                        <div class="liquid-glass-subtle p-4 text-center">
+                            <p style="color: var(--text-primary);">
+                                <i class="fas fa-shield-alt ml-2" style="color: var(--primary-color);"></i>
+                                הפרטים משמשים למענה בלבד ולא נמסרים לצדדים שלישיים
+                            </p>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary py-5 rounded-xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]">
+                            שמור את מקומי בסדנה 🚀
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="text-center space-y-4 mt-8">
+                    <div class="flex justify-center items-center gap-8">
+                        <p class="flex items-center gap-2" style="color: var(--text-primary);">
+                            <div class="professional-icon w-8 h-8 text-sm">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            המידע מוגן ומאובטח
+                        </p>
+                        <p class="flex items-center gap-2" style="color: var(--text-primary);">
+                            <div class="professional-icon w-8 h-8 text-sm">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            אישור תוך דקות ספורות
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message -->
+    <div id="success-message" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md mx-4 text-center">
+            <div class="text-6xl mb-4">🎉</div>
+            <h3 class="text-2xl font-bold text-green-600 mb-4">רישום בוצע בהצלחה!</h3>
+            <p class="text-gray-600 mb-6">אישור נשלח למייל שלך. נתראה בסדנה!</p>
+            <button onclick="document.getElementById('success-message').classList.add('hidden')" 
+                    class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600">
+                סגור
+            </button>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">שאלות נפוצות</h3>
+                <p class="text-xl text-gray-600">כל מה שרצית לדעת על הסדנה</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-right bg-white hover:bg-gray-50 flex justify-between items-center">
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <span class="font-medium">האם אני צריך ידע קודם ב-AI?</span>
+                    </button>
+                    <div class="hidden px-6 py-4 border-t bg-gray-50">
+                        <p class="text-gray-700">לא בכלל! הסדנה מתאימה למתחילים מוחלטים. נתחיל מהיסודות ונתקדם בהדרגה.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-right bg-white hover:bg-gray-50 flex justify-between items-center">
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <span class="font-medium">כמה עולה הסדנה?</span>
+                    </button>
+                    <div class="hidden px-6 py-4 border-t bg-gray-50">
+                        <p class="text-gray-700">המחיר הוא 1,200 ש"ח לאדם. הסדנה כוללת חומרי לימוד, תבניות מוכנות וחוברת מסכמת לשימוש אישי.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-right bg-white hover:bg-gray-50 flex justify-between items-center">
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <span class="font-medium">האם יש הקלטה של הסדנה?</span>
+                    </button>
+                    <div class="hidden px-6 py-4 border-t bg-gray-50">
+                        <p class="text-gray-700">כן, כל המשתתפים מקבלים גישה להקלטת הסדנה.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-right bg-white hover:bg-gray-50 flex justify-between items-center">
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <span class="font-medium">איך אני יכול להיות בטוח שזה יעבוד בשבילי?</span>
+                    </button>
+                    <div class="hidden px-6 py-4 border-t bg-gray-50">
+                        <p class="text-gray-700">מובטח החזר כספי מלא במשך 7 ימים אם לא מרוצים מהסדנה.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-right bg-white hover:bg-gray-50 flex justify-between items-center">
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <span class="font-medium">מתי ואיפה הסדנה מתקיימת?</span>
+                    </button>
+                    <div class="hidden px-6 py-4 border-t bg-gray-50">
+                        <p class="text-gray-700">הסדנה מתקיימת במועדון במושב כוכב מיכאל (בין אשקלון לקרית גת). במידת הצורך, ניתן לארגן את הסדנה במיקום שתבחרו - יש ליצור קשר להתאמה אישית.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Modals -->
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">תקנון ותנאי שימוש</h2>
+                    <button onclick="closeModal('terms')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="text-gray-700 space-y-4 text-right leading-relaxed">
+                    <p class="font-medium">השימוש באתר זה כפוף לתנאים הבאים:</p>
+                    <ul class="list-disc list-inside space-y-2 mr-4">
+                        <li>האתר מיועד לצורכי מידע בלבד.</li>
+                        <li>המידע באתר עשוי להשתנות ללא הודעה מוקדמת.</li>
+                        <li>בעל האתר שומר לעצמו את הזכות לשנות תנאים אלה.</li>
+                        <li>השימוש באתר מהווה הסכמה לתנאים אלה.</li>
+                        <li>לכל שאלה ניתן לפנות דרך טופס יצירת הקשר באתר.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">מדיניות פרטיות</h2>
+                    <button onclick="closeModal('privacy')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="text-gray-700 space-y-4 text-right leading-relaxed">
+                    <ul class="list-disc list-inside space-y-3 mr-4">
+                        <li>דף זה אינו משתמש בעוגיות מכל סוג שהוא.</li>
+                        <li>המידע היחיד שנאסף הוא הפרטים שתמלאו בטופס 'צור קשר', והם מועברים ישירות לבעל העסק בלבד.</li>
+                        <li>המידע נשמר אך ורק לצורך טיפול בפנייתכם ואינו מועבר לצדדים שלישיים.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Modal -->
+    <div id="accessibility-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">הצהרת נגישות</h2>
+                    <button onclick="closeModal('accessibility')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="text-gray-700 space-y-4 text-right leading-relaxed">
+                    <p>אתר זה נבנה בהתאם לתקני הנגישות WCAG 2.0 ברמה AA.</p>
+                    <div>
+                        <p class="font-medium mb-2">תכונות נגישות באתר:</p>
+                        <ul class="list-disc list-inside space-y-2 mr-4">
+                            <li>ניווט מקלדת מלא</li>
+                            <li>תמיכה בקוראי מסך</li>
+                            <li>אפשרות הגדלת טקסט</li>
+                            <li>התאמת קונטרסט</li>
+                            <li>מבנה סמנטי תקין</li>
+                            <li>תיאורים חלופיים לתמונות</li>
+                        </ul>
+                    </div>
+                    <p>לכל בעיה או הצעה בנושא נגישות, אנא פנו אלינו דרך טופס יצירת הקשר.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Accessibility Widget -->
+    <div id="accessibility-widget" class="fixed bottom-4 left-4 z-40">
+        <button id="accessibility-widget-btn" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110" aria-label="תפריט נגישות מתקדם">
+            <span class="text-xl">♿</span>
+        </button>
+        
+        <div id="accessibility-panel" class="hidden absolute bottom-16 left-0 bg-white rounded-lg shadow-xl border p-4 w-64">
+            <h3 class="font-bold mb-3 text-gray-900 text-right">תפריט נגישות</h3>
+            <div class="space-y-2 text-right">
+                <button onclick="adjustFontSize('increase')" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-plus text-green-600"></i>
+                    <span>הגדל טקסט</span>
+                </button>
+                <button onclick="adjustFontSize('decrease')" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-minus text-red-600"></i>
+                    <span>הקטן טקסט</span>
+                </button>
+                <button onclick="toggleHighContrast()" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-adjust text-purple-600"></i>
+                    <span>ניגודיות גבוהה</span>
+                </button>
+                <button onclick="highlightLinks()" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-link text-blue-600"></i>
+                    <span>הדגש קישורים</span>
+                </button>
+                <button onclick="stopAnimations()" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-stop text-orange-600"></i>
+                    <span>עצור אנימציות</span>
+                </button>
+                <button onclick="toggleAltTexts()" class="w-full text-right px-3 py-2 hover:bg-gray-100 rounded text-sm flex items-center justify-between">
+                    <i class="fas fa-eye text-indigo-600"></i>
+                    <span>הפעל תיאורי ALT</span>
+                </button>
+                <hr class="my-2">
+                <button onclick="resetAccessibility()" class="w-full text-right px-3 py-2 hover:bg-red-50 rounded text-sm text-red-600 flex items-center justify-between">
+                    <i class="fas fa-undo"></i>
+                    <span>אפס הגדרות</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="liquid-glass-subtle py-16" style="background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center md:text-right text-white">
+                
+                <!-- Logo and Business Info -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                        <div class="w-16 h-16 flex items-center justify-center">
+                            <img src="https://i.imgur.com/lOLiTah.png" alt="לוגו רועי טל AI PRO" 
+                                 class="w-full h-full object-contain" loading="lazy">
+                        </div>
+                        <div class="text-right">
+                            <h4 class="font-bold text-xl text-white">AI PRO</h4>
+                            <p class="text-sm opacity-80">סדנת HR מתקדמת</p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <p class="font-bold text-lg mb-2">רועי טל</p>
+                        <p class="text-sm opacity-80">AI פשוט בעולם חכם</p>
+                        <p class="text-sm opacity-80 mt-2">
+                            <i class="fas fa-globe ml-1"></i>
+                            <a href="https://hr-workshop.rt-ai.co.il" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition-colors">
+                                hr-workshop.rt-ai.co.il
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">קישורים מהירים</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#benefits" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-star ml-2"></i>יתרונות
+                        </a></li>
+                        <li><a href="#register" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-user-plus ml-2"></i>הרשמה
+                        </a></li>
+                        <li><a href="https://www.rt-ai.co.il" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-external-link-alt ml-2"></i>האתר שלי
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal Info -->
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">מידע משפטי</h4>
+                    <ul class="space-y-3">
+                        <li><button onclick="openModal('terms')" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-file-contract ml-2"></i>תקנון ותנאי שימוש
+                        </button></li>
+                        <li><button onclick="openModal('privacy')" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-shield-alt ml-2"></i>מדיניות פרטיות
+                        </button></li>
+                        <li><button onclick="openModal('accessibility')" class="hover:text-yellow-300 transition-colors flex items-center justify-center md:justify-start">
+                            <i class="fas fa-universal-access ml-2"></i>הצהרת נגישות
+                        </button></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">יצירת קשר</h4>
+                    <div class="space-y-4">
+                        <p class="flex items-center justify-center md:justify-start">
+                            <i class="fas fa-envelope ml-3"></i>
+                            <a href="mailto:roi@rt-ai.co.il" class="hover:text-yellow-300 transition-colors">roi@rt-ai.co.il</a>
+                        </p>
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fab fa-instagram ml-3" style="color: #E4405F;"></i>
+                            <a href="https://instagram.com/roital_ai" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition-colors">@roital_ai</a>
+                        </div>
+                        
+                        <div class="flex items-center justify-center md:justify-start">
+                            <i class="fab fa-whatsapp ml-3" style="color: #25D366;"></i>
+                            <a href="https://wa.me/972523299985" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-300 transition-colors">052-3299985</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-white/20 mt-12 pt-8 text-center">
+                <div class="space-y-2 text-sm opacity-80">
+                    <p>&copy; 2025 רועי טל - AI פשוט בעולם חכם. כל הזכויות שמורות.</p>
+                    <p>אתר זה בנוי בהתאם לתקני נגישות WCAG 2.0</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

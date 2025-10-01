@@ -1,0 +1,40 @@
+📋 רשימת קבצים להעלאה ל-BOX.CO.IL
+===========================================
+
+✅ קבצים חיוניים - העלה רק את אלה:
+------------------------------------------
+📄 index.html              (עמוד ראשי)
+📁 css/
+   └── 📄 liquid-glass.css  (עיצובים)
+📁 js/
+   └── 📄 main.js          (פונקציונליות)
+🤖 robots.txt              (SEO)
+🗺️ sitemap.xml             (מפת אתר)
+⚙️ .htaccess               (הגדרות שרת)
+
+❌ קבצים שלא צריך להעלות:
+---------------------------
+README.md
+WEBHOOK_SETUP.md
+BOX_CO_IL_SETUP.md
+DOMAIN_SETUP.md
+MAKE_TROUBLESHOOTING.md
+UPLOAD_INSTRUCTIONS.md
+LOGO_INTEGRATION.md
+FILES_TO_UPLOAD.txt
+CNAME
+_headers
+_redirects
+
+📍 מיקום העלאה ב-cPanel:
+------------------------
+public_html/hr-workshop/
+
+🌐 כתובת סופית:
+---------------
+https://hr-workshop.rt-ai.co.il
+
+📋 הרשאות נדרשות:
+-----------------
+📁 תיקיות: 755
+📄 קבצים: 644

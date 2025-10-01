@@ -1,0 +1,106 @@
+# .htaccess זמני ללא הפניית HTTPS
+# לשימוש עד להפעלת תעודת SSL ב-BOX.CO.IL
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# הערה: הפניית HTTPS מושבתת זמנית עד להפעלת SSL
+# לאחר הפעלת SSL - החזר את השורות הבאות:
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Remove www (if needed) - works for both HTTP and HTTPS
+    RewriteCond %{HTTP_HOST} ^www\.hr-workshop\.rt-ai\.co\.il [NC]
+    RewriteRule ^(.*)$ http://hr-workshop.rt-ai.co.il/$1 [L,R=301]
+    
+    # Handle missing .html extensions
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Cache Control for Performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Images
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Error Pages
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+
+# Security - Deny access to sensitive files
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files "*.md">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Allow SEO files
+<Files "robots.txt">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files "sitemap.xml">
+    Order Allow,Deny  
+    Allow from all
+</Files>
+
+# UTF-8 Encoding for Hebrew support
+AddDefaultCharset UTF-8
+
+# MIME Types
+<IfModule mod_mime.c>
+    AddType application/font-woff woff
+    AddType application/font-woff2 woff2
+    AddType application/json json
+    AddType text/css css
+    AddType application/javascript js
+</IfModule>

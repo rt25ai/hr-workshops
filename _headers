@@ -1,0 +1,23 @@
+# Security Headers for hr-workshop.rt-ai.co.il
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  
+# Cache Control
+/*.css
+  Cache-Control: max-age=31536000
+/*.js  
+  Cache-Control: max-age=31536000
+/*.png
+  Cache-Control: max-age=31536000
+/*.jpg
+  Cache-Control: max-age=31536000
+/*.gif
+  Cache-Control: max-age=31536000
+
+# Main page
+/
+  Cache-Control: max-age=3600
